@@ -86,5 +86,24 @@ footer {
         }
     }
 }
+
+.btn {
+    background-color: #00DBDE;
+    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+    background-size: 200%;
+    animation: gradient 10s infinite linear;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 80% 0%;
+    }
+    50% {
+        background-position: 20% 100%;
+    }
+    100% {
+        background-position: 80% 0%;
+    }
+}
     
     
