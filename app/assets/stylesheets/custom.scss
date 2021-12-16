@@ -94,6 +94,24 @@ footer {
         }
     }
 }
+@media (max-width: 800px) {
+    footer {
+         small {
+            display: block;
+            float: none;
+            margin-bottom: 1em;
+        }
+        ul {
+            text-align: center;
+            float: none;
+            padding: 0;
+            li {
+                float: none;
+                padding: 10px;
+            }
+        }
+    }
+}
 
 .btn {
     background-color: #00DBDE;
