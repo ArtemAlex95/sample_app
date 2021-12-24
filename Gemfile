@@ -7,27 +7,24 @@ ruby '3.0.3'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 gem 'bcrypt', '3.1.13'
 gem 'faker', '2.11.0'
+gem 'active_storage_validations', '0.8.9'
 gem 'bootstrap-sass', '3.4.1'
 gem 'will_paginate', '3.3.0'
 gem 'bootstrap-will_paginate', '1.0.0'
+gem 'image_processing', '1.12.1'
+gem 'mini_magick', '4.9.5'
 # Use Puma as the app server
-gem 'puma', '~> 5.0'
+gem 'puma', '~> 5.5.2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 5.0'
+gem 'webpacker', '~> 5.4.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5.2.1'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.10.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
-# Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
-
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.7.2', require: false
 
@@ -37,6 +34,7 @@ end
 
 group :production do
   gem 'pg'
+  gem 'aws-sdk-s3', '1.46.0', require: false
 end
 
 group :development, :test do
@@ -49,15 +47,15 @@ group :development do
   gem 'web-console', '>= 4.1.0'
   # Display performance information such as SQL time and flame graphs for each request in your browser.
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
-  gem 'rack-mini-profiler', '~> 2.0'
+  gem 'rack-mini-profiler', '~> 2.3.1'
   gem 'listen', '~> 3.7.0'
-  gem 'spring', '2.1.0'
+  gem 'spring', '2.1.1'
   gem 'spring-watcher-listen', '2.0.1'
 end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 3.26'
+  gem 'capybara', '3.35.3'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
