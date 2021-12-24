@@ -34,7 +34,7 @@ end
 
 group :production do
   gem 'pg'
-  gem 'aws-sdk-s3', '1.46.0', require: false
+  gem 'aws-sdk-s3', '1.48.0', require: false
 end
 
 group :development, :test do
