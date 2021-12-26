@@ -29,6 +29,9 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", users_path
     assert_select "a[href=?]", edit_user_path(@user)
     assert_select "a[href=?]", logout_path
+    assert_select "a[href=?]", followers_user_path(@user)
+    assert_select "a[href=?]", following_user_path(@user)
+    assert_select "div.field"
     get contact_path
     assert_select "title", full_title('Contact')
     get sign_up_path
