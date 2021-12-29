@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  namespace :api do
+    resources :microposts, :users, :relationships, :password_resets, :account_activations
+  end
   get 'password_resets/new'
   get 'password_resets/edit'
   root 'static_pages#home'

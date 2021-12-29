@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  around_action :catch_not_found
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy, :following, :followers]
   before_action :correct_user, only: [:edit, :update]
   before_action :admin_user, only: :destroy
@@ -61,6 +62,13 @@ class UsersController < ApplicationController
   end
 
   private
+
+  def catch_not_found
+    yield
+  rescue ActiveRecord::RecordNotFound
+    redirect_to root_path
+    flash[:danger] = 'User not found'
+  end
 
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)

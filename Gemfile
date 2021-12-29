@@ -13,6 +13,9 @@ gem 'will_paginate', '3.3.0'
 gem 'bootstrap-will_paginate', '1.0.0'
 gem 'image_processing', '1.12.1'
 gem 'mini_magick', '4.9.5'
+gem 'active_model_serializers', '~> 0.10.0'
+gem 'oj'
+gem 'fast_jsonapi'
 # Use Puma as the app server
 gem 'puma', '~> 5.5.2'
 # Use SCSS for stylesheets
